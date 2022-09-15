@@ -13,3 +13,38 @@ while i < jumlah_tagihan: # selama nilai i kurang dari jumlah_tagihan
     total_tagihan += tagihan[i] # tambahkan tagihan[i] ke total_tagihan
     i += 1 # tambahkan nilai i dengan 1 untuk memproses tagihan selanjutnya.
 print(total_tagihan)
+
+
+# while loop - part 2
+tagihan = [50000, 75000, -150000, 125000, 300000, -50000, 200000]
+i = 0
+jumlah_tagihan = len(tagihan)
+total_tagihan = 0
+
+print (jumlah_tagihan)
+while i < jumlah_tagihan:
+    # jika terdapat tagihan ke-i yang bernilai minus (di bawah nol),
+    # pengulangan akan dihentikan
+    if tagihan[i] < 0:
+        total_tagihan = -1
+        print("terdapat angka minus dalam tagihan, perhitungan dihentikan!")
+        break
+    total_tagihan += tagihan[i]
+    i += 1
+print(total_tagihan)
+
+#While Loop Part-3
+
+tagihan = [50000, 75000, -150000, 125000, 300000, -50000, 200000]
+i = 0
+jumlah_tagihan = len(tagihan)
+total_tagihan = 0
+while i < jumlah_tagihan:
+    # jika terdapat tagihan ke-i yang bernilai minus (di bawah nol),
+    # abaikan tagihan ke-i dan lanjutkan ke tagihan berikutnya
+    if tagihan[i] < 0:
+        i += 1
+        continue
+    total_tagihan += tagihan[i]
+    i += 1
+print(total_tagihan)
