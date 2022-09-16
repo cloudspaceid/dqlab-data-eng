@@ -4,13 +4,13 @@ keuangan = {
 'pemasukan': [7.8, 7.5, 9, 7.6, 7.2, 7.5, 7, 10, 7.5]
 }
 # Perhitungan rata-rata pemasukan dan rata-rata pengeluaran
-total_pengeluaran = ___
-total_pemasukan = ___
-for biaya in ___['pengeluaran']:
-    ___
-for biaya in ___:
-    ___
-rata_rata_pengeluaran = ___
-rata_rata_pemasukan = ___
+total_pengeluaran = 0
+total_pemasukan = 0
+for biaya in keuangan['pengeluaran']:
+    total_pengeluaran += biaya
+for biaya in keuangan['pemasukan']:
+    total_pemasukan += biaya
+rata_rata_pengeluaran = total_pengeluaran/len(keuangan['pengeluaran'])
+rata_rata_pemasukan = total_pemasukan/len(keuangan['pemasukan'])
 print(rata_rata_pengeluaran)
 print(rata_rata_pemasukan)
