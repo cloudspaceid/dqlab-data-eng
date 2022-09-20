@@ -11,6 +11,9 @@ with closing(requests.get(url, stream=True)) as r:
 # Buat list of dict dengan nama harga rumah
 key_harga_rumah = ___[0]
 harga_rumah = []
+
+print(data_harga_rumah)
+
 for baris_harga_rumah in ___[1:]:
 	dict_harga_rumah = dict()
 	for i in range(len(___)):
