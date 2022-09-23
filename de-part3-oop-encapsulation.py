@@ -1,22 +1,12 @@
-class Karyawan:
-    nama_perusahaan = 'ABC'
-    insentif_lembur = 250000
-    def __init__(self, nama, usia, pendapatan):
-        self.__nama = nama
-        self.__usia = usia
-        self.__pendapatan = pendapatan
-        self.__pendapatan_tambahan = 0
-    def lembur(self):
-        insentif_lembur = self.__insentif_lembur
-        if usia > 30:
-            insentif_lembur *= 2
-        self.__pendapatan_tambahan += insentif_lembur
-    def tambahan_proyek(self, insentif_proyek):
-        self.__pendapatan_tambahan += insentif_proyek
-    def total_pendapatan(self):
-        return self.__pendapatan + self.__pendapatan_tambahan
+class Burung:
+    def __init__(self, nama):
+        self.nama = nama
+    def fly(self):
+        print(nama + ' sedang terbang')
 
-karyawan_1 = Karyawan('Kiki', 35, 8000000)
-karyawan_1.lembur()
-karyawan_1.tambahan_proyek(karyawan_1.total_pendapatan())
-print(karyawan_1.total_pendapatan())
+class Ayam(Burung):
+    def fly(self):
+        print(self.nama + ' tidak bisa terbang')
+
+anak_ayam = Ayam('Si Jago')
+anak_ayam.fly()
